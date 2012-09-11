@@ -1,11 +1,7 @@
 <?
 
-
-
-
-
 /**
- * Implementation of hook_init()
+ * Implementation of hook_init() to change a hard coded ugly core string
  */
 function haxeflixel_site_init () {
     if ( isset( $_SESSION[ 'messages' ] ) ) {
@@ -22,189 +18,13 @@ function haxeflixel_site_init () {
             }
         }
     }
-    
 }
-
-
-//     $messages = $_SESSION['messages'];
-//      
-//      if ( isset($messages['status'])) {
-////          drupal_set_message_array($messages['status']);
-////          foreach ($messages['status'] as $message) {
-//              
-////              if ( $message == $targetm ) {
-////                  $message = 'shivers!!';
-////              }
-//              $mes = $messages['status'];
-//              $mes[0] = "wow!";
-//          
-//          
-//          }
-
-
-//if (is_array($_SESSION['messages'])) {
-//    foreach($_SESSION['messages'] as $type => $messages) {
-//      foreach($messages as $key=>$message) {        
-//		if ($type == "status" && strpos($message, 'validation e-mail has been sent to your e-mail address')) $_SESSION['messages']['status'][$key] = '<b>Thanks, we received your details!</b><br /><br />We have sent an email in order to verify your address.  Please check your email in order to complete the registration process<br />';
-//        
-//        
-//        
-//    }
-//  }
-//}
-
 
 function test () {
 
 
-//    $captcha_points = array();
-//    
-//       $result = db_query("SELECT * FROM {captcha_points} ORDER BY form_id");
-//        foreach ($result as $record) {
-//         $captcha_points[] = $record;
-//       }
-
-
-//     return $captcha_points;
-
-    $captcha_sid = 'user_register_form';
-    db_update ( 'captcha_points' )
-        ->condition ( 'form_id' , $captcha_sid )
-        ->fields ( array (
-        'module' => 'image_captcha' ,
-        'captcha_type' => 'Image' ,
-    ) )
-        ->execute ();
-
 }
-
-/*   [0] => stdClass Object
-(
-    [form_id] => comment_node_book_form
-    [module] => captcha
-    [captcha_type] => Math
-)
-
-[1] => stdClass Object
-(
-    [form_id] => comment_node_demo_form
-    [module] => captcha
-    [captcha_type] => Math
-)
-
-[2] => stdClass Object
-(
-    [form_id] => comment_node_forum_form
-    [module] => captcha
-    [captcha_type] => Math
-)
-
-[3] => stdClass Object
-(
-    [form_id] => comment_node_site_page_form
-    [module] => captcha
-    [captcha_type] => Math
-)
-
-[4] => stdClass Object
-(
-    [form_id] => comment_node_snippet_form
-    [module] => captcha
-    [captcha_type] => Math
-)
-
-[5] => stdClass Object
-(
-    [form_id] => comment_node_tutorial_form
-    [module] => captcha
-    [captcha_type] => Math
-)
-
-[6] => stdClass Object
-(
-    [form_id] => contact_personal_form
-    [module] => 
-    [captcha_type] => 
-)
-
-[7] => stdClass Object
-(
-    [form_id] => contact_site_form
-    [module] => 
-    [captcha_type] => 
-)
-
-[8] => stdClass Object
-(
-    [form_id] => forum_node_form
-    [module] => captcha
-    [captcha_type] => Math
-)
-
-[9] => stdClass Object
-(
-    [form_id] => user_login
-    [module] => 
-    [captcha_type] => 
-)
-
-[10] => stdClass Object
-(
-    [form_id] => user_login_block
-    [module] => 
-    [captcha_type] => 
-)
-
-[11] => stdClass Object
-(
-    [form_id] => user_pass
-    [module] => 
-    [captcha_type] => 
-)
-
-[12] => stdClass Object
-(
-    [form_id] => user_register_form
-    [module] => image_captcha
-    [captcha_type] => Image
-)*/
-
-
-/*
-function haxeflixel_site_modules_installed () {
-    
-    drupal_set_message("WWOWW!");
-    
-    
-    $node = array (
-        'title' => 'Test Chris' ,
-        'type' => 'site_page' ,
-        'uid' => contentUsery ()->uid ,
-    );
-    createNode ( $node );
-    
-    
-}
-function contentUsery () {
-    
-    $userName = 'Chris';
-    $user = user_load_by_name ( $userName );
-    
-    return $user;
-}*/
 
 
 /*//use custom modal and ajax to grab submit handler etc
 //http://haxedev/media/browser?render=media-popup
-
-$nodeSettings = array (
-    'title' => 'Test Haxe Snippet 1' ,
-    'type' => 'snippet' ,
-    'text_fields' => array (
-        0 => array (
-            'text' => 'boo code' ,
-            'field_name' => 'field_haxe' ,
-        )
-    ) ,
-);
-createNode($nodeSettings);*/
