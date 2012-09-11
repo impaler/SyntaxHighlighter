@@ -1,0 +1,5 @@
+name = HaxeFlixel Site Module
+core = 7.x
+package = HaxeFlixel
+description = Enables the HaxeFlixel Site Module
+version = 7.x
