@@ -25,21 +25,16 @@ function haxeflixel_site_init () {
  * Implementation of hook_wysiwyg_editor_settings_alter()
  */
 function haxeflixel_site_wysiwyg_editor_settings_alter(&$settings, $context) {
-  if ($context['profile']->editor == 'ckeditor') {
-      drupal_set_message('ckeditor alter !');
-    // set various CKEditor option to address problem with extra p tags being added
-//    $settings['enterMode'] = 1;
-////    $settings['ignoreEmptyParagraph'] = false;
-//    $settings['forceEnterMode'] = true;
-//    $settings['autoParagraph'] = false;
-//      
-//    $settings['shiftEnterMode'] = 2;
-//    $settings['forcePasteAsPlainText'] = true;
-
-    // Example of setting customConfig option. Just note it gets overridden by values in $settings.
-    $settings['customConfig'] = 'path/to/my/config.js';
-  }
+    if ($context['profile']->editor == 'tinymce') {
+      $settings['forced_root_block'] = FALSE;
+      $settings['force_br_newlines'] = TRUE;
+      $settings['force_p_newlines'] = FALSE;
+    }
+    
 }
+
+
+
 
 
 function test () {
